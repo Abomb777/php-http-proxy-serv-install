@@ -18,7 +18,7 @@ mkdir -p /var/www/proxy
 
 ## Installation
 sudo apt-get -y install composer
-composer create-project Abomb777/basic-php-proxy:dev-master /var/www/proxy --no-interaction
+composer create-project Abomb777/basic-php-proxy /var/www/proxy --no-interaction
 
 ## Download configuration
 #wget https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/nginx/ubuntu20.conf -O /etc/nginx/sites-available/default
