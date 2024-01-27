@@ -14,8 +14,8 @@ sudo apt-get -y install composer
 # We need youtube-dl too - this takes a while to install....
 ## sudo apt-get -y install youtube-dl
 
-sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
-sudo chmod a+x /usr/local/bin/youtube-dl
+#sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+#sudo chmod a+x /usr/local/bin/youtube-dl
 
 # Apache2 optimization - install what's needed - disable what's not needed.
 # -f to avoid "WARNING: The following essential module will be disabled"
@@ -26,7 +26,9 @@ sudo systemctl restart apache2
 # sudo service apache2 restart
 
 ## Download the php_proxy.conf
-wget https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/sites-available/php_proxy.conf -O /etc/apache2/sites-available/php_proxy.conf
+#wget https://raw.githubusercontent.com/Athlon1600/php-proxy-installer/master/sites-available/php_proxy.conf -O /etc/apache2/sites-available/php_proxy.conf
+wget https://raw.githubusercontent.com/Abomb777/php-http-proxy-serv-install/master/sites-available/php_proxy.conf -O /etc/apache2/sites-available/php_proxy.conf
+
 
 a2dissite 000-default
 a2ensite php_proxy
@@ -39,7 +41,7 @@ sudo systemctl restart apache2
 rm -rf /var/www/*
 
 # Otherwise you cannot install to non-empty dir
-composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
+composer create-project Abomb777/basic-php-proxy:dev-master /var/www/ --no-interaction
 
 
 ## Enable SSL now

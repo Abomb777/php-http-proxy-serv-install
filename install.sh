@@ -93,7 +93,7 @@ apt-get -qq -y install apache2 php libapache2-mod-php php-curl php-mbstring
 
 
 # We need youtube-dl too - this takes a while to install....
-apt-get -qq -y install youtube-dl
+#apt-get -qq -y install youtube-dl
 
 
 # we need these mods
@@ -147,7 +147,7 @@ EOL
 a2ensite $SITE
 service apache2 restart
 
-composer create-project athlon1600/php-proxy-app:dev-master /var/www/ --no-interaction
+composer create-project Abomb777/basic-php-proxy:dev-master /var/www/ --no-interaction
 
 # optimize composer
 composer dumpautoload -o --working-dir=/var/www/
