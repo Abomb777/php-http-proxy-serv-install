@@ -147,7 +147,7 @@ EOL
 a2ensite $SITE
 service apache2 restart
 
-composer create-project Abomb777/basic-php-proxy:dev-master /var/www/ --no-interaction
+composer create-project Abomb777/basic-php-proxy /var/www/ --no-interaction
 
 # optimize composer
 composer dumpautoload -o --working-dir=/var/www/
